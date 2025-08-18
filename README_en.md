@@ -51,16 +51,16 @@ Desktop client software coming soon, stay tuned.
 
 ### 1.2 Image Versions
 
-- Default version (download models automatically when no built-in models are available): `xxnuo/mtranserver:latest`
-- Built-in Chinese <-> English translation models: `xxnuo/mtranserver:latest-zh`
-- Built-in Japanese <-> English translation models: `xxnuo/mtranserver:latest-ja`
+- Default version (download models automatically when no built-in models are available): `xxnuo/mtranserver:2.1.1`
+- Built-in Chinese <-> English translation models: `xxnuo/mtranserver:2.1.1-zh`
+- Built-in Japanese <-> English translation models: `xxnuo/mtranserver:2.1.1-ja`
 
 ### 1.3 Docker Deployment
 
 Copy the command below and execute it in your terminal.
 
 ```bash
-docker run -d --name mtranserver -p 8989:8989 -e API_TOKEN=your_token xxnuo/mtranserver:latest
+docker run -d --name mtranserver -p 8989:8989 -e API_TOKEN=your_token xxnuo/mtranserver:2.1.1
 ```
 
 ### 1.4 Docker Compose Deployment
@@ -82,7 +82,7 @@ Open `compose.yml` with an editor and add the following content:
 ```yaml
 services:
   mtranserver:
-    image: xxnuo/mtranserver:latest
+    image: xxnuo/mtranserver:2.1.1
     container_name: mtranserver
     restart: unless-stopped
     ports:
@@ -159,7 +159,7 @@ Replace `your_token` in the following tables with your `API_TOKEN` or `CORE_API_
 
 ```bash
 cd mtranserver
-docker pull xxnuo/mtranserver:latest
+docker pull xxnuo/mtranserver:2.1.1
 docker compose up -d
 ```
 

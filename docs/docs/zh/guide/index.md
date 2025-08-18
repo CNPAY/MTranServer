@@ -102,7 +102,7 @@ mkdir models
 ```yaml
 services:
   mtranserver:
-    image: xxnuo/mtranserver:latest
+    image: xxnuo/mtranserver:2.1.1
     container_name: mtranserver
     restart: unless-stopped
     ports:
@@ -245,7 +245,7 @@ docker compose up -d
 
 ```bash
 docker compose down
-docker pull xxnuo/mtranserver:latest
+docker pull xxnuo/mtranserver:2.1.1
 docker compose up -d
 ```
 

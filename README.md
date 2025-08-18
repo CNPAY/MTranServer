@@ -52,16 +52,16 @@
 
 ### 1.2 镜像版本
 
-- 默认无内置模型翻译时自动下载：`xxnuo/mtranserver:latest`
-- 内置中英互译模型：`xxnuo/mtranserver:latest-zh`
-- 内置日英互译模型：`xxnuo/mtranserver:latest-ja`
+- 默认无内置模型翻译时自动下载：`xxnuo/mtranserver:2.1.1`
+- 内置中英互译模型：`xxnuo/mtranserver:2.1.1-zh`
+- 内置日英互译模型：`xxnuo/mtranserver:2.1.1-ja`
 
 ### 1.3 Docker 部署
 
 复制下面的命令，在终端执行。
 
 ```bash
-docker run -d --name mtranserver -p 8989:8989 -e API_TOKEN=your_token xxnuo/mtranserver:latest
+docker run -d --name mtranserver -p 8989:8989 -e API_TOKEN=your_token xxnuo/mtranserver:2.1.1
 ```
 
 ### 1.4 Docker Compose 部署
@@ -85,7 +85,7 @@ touch compose.yml
 ```yaml
 services:
   mtranserver:
-    image: xxnuo/mtranserver:latest
+    image: xxnuo/mtranserver:2.1.1
     container_name: mtranserver
     restart: unless-stopped
     ports:
@@ -162,7 +162,7 @@ docker compose up -d
 
 ```bash
 cd mtranserver
-docker pull xxnuo/mtranserver:latest
+docker pull xxnuo/mtranserver:2.1.1
 docker compose up -d
 ```
 
